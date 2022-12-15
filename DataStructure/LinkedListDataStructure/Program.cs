@@ -30,6 +30,8 @@ namespace DataStructure.LinkedListDataStructure
             list.Display();
             list.DeleteAtParticularPosition(2);
             list.Display();
+            list.size();
+            list.Display();
         }
     }
 }

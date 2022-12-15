@@ -201,5 +201,22 @@ namespace DataStructure.LinkedListDataStructure
             temp.next = next;
             Console.WriteLine("Node Deleted on" + position + " Position");
         }
+        public void size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                System.Console.WriteLine("Linked list is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                System.Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            System.Console.WriteLine("linked list size is :" + count);
+        }
     }
 }
