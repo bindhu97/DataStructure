@@ -72,7 +72,7 @@ namespace DataStructure.LinkedListDataStructure
                     Console.WriteLine("Position out of range");
                 }
             }
-            System.Console.WriteLine("\n inserting value: " + data + " Postion " + position);
+            Console.WriteLine("\n inserting value: " + data + " Postion " + position);
             return head;
         }
         internal void Append(int data)
@@ -88,7 +88,7 @@ namespace DataStructure.LinkedListDataStructure
                 head = node2;
                 head.next = temp;
             }
-            System.Console.WriteLine(data + " added in  appending order \n ");
+            Console.WriteLine(data + " added in  appending order \n ");
         }
         internal Node RemoveFirstNode()
         {
@@ -97,7 +97,7 @@ namespace DataStructure.LinkedListDataStructure
                 return null;
             }
             this.head = this.head.next;
-            System.Console.WriteLine("First Node Removed.");
+            Console.WriteLine("First Node Removed.");
             return this.head;
         }
         internal Node RemoveLastNode()
@@ -117,7 +117,7 @@ namespace DataStructure.LinkedListDataStructure
                 newNode = newNode.next;
             }
             newNode.next = null;
-            System.Console.WriteLine("Last Node Removed.");
+            Console.WriteLine("Last Node Removed.");
             return head;
         }
         internal int Search(int value)
@@ -136,12 +136,12 @@ namespace DataStructure.LinkedListDataStructure
 
             if (count >= 0)
             {
-                System.Console.WriteLine("result fount at " + count + " location");
+                Console.WriteLine("result fount at " + count + " location");
                 return count;
             }
             else
             {
-                System.Console.WriteLine("list is empty");
+                Console.WriteLine("list is empty");
                 return -1;
 
             }
@@ -177,8 +177,29 @@ namespace DataStructure.LinkedListDataStructure
                     Console.WriteLine("Position out of range");
                 }
             }
-            System.Console.WriteLine("\n inserting value: " + data + " Postion " + position);
+            Console.WriteLine("\n inserting value: " + data + " Postion " + position);
             return head;
+        }
+        internal void DeleteAtParticularPosition(int position)
+        {
+            Node temp = new Node(position);
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+                return;
+            }
+
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            Console.WriteLine("Node Deleted on" + position + " Position");
         }
     }
 }

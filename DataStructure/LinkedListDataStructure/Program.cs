@@ -28,6 +28,8 @@ namespace DataStructure.LinkedListDataStructure
             list.Search(30);
             list.InsertAtParticularPosition1(2, 40);
             list.Display();
+            list.DeleteAtParticularPosition(2);
+            list.Display();
         }
     }
 }
