@@ -44,7 +44,9 @@ namespace DataStructure.LinkedListDataStructure
         internal Node InsertAtParticularPosition(int position, int data)
         {
             if (position < 1)
+            {
                 Console.WriteLine("Invalid position");
+            }
 
             if (position == 1)
             {
@@ -66,10 +68,22 @@ namespace DataStructure.LinkedListDataStructure
                     head = head.next;
                 }
                 if (position != 1)
+                {
                     Console.WriteLine("Position out of range");
+                }
             }
-            Console.WriteLine("Inserted value is: " + head);
+            System.Console.WriteLine("\n inserting value: " + data + " Postion " + position);
             return head;
+        }
+        internal Node RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            System.Console.WriteLine("First Node Removed.");
+            return this.head;
         }
     }
 }

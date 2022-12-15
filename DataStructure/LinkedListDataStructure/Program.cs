@@ -16,6 +16,8 @@ namespace DataStructure.LinkedListDataStructure
             list.Add(70);
             list.Display();
             list.InsertAtParticularPosition(2, 30);
+            list.RemoveFirstNode();
+            list.Display();
         }
     }
 }
