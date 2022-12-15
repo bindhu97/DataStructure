@@ -120,5 +120,31 @@ namespace DataStructure.LinkedListDataStructure
             System.Console.WriteLine("Last Node Removed.");
             return head;
         }
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+
+            if (count >= 0)
+            {
+                System.Console.WriteLine("result fount at " + count + " location");
+                return count;
+            }
+            else
+            {
+                System.Console.WriteLine("list is empty");
+                return -1;
+
+            }
+        }
     }
 }
