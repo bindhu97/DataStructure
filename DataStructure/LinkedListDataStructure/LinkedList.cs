@@ -75,6 +75,21 @@ namespace DataStructure.LinkedListDataStructure
             System.Console.WriteLine("\n inserting value: " + data + " Postion " + position);
             return head;
         }
+        internal void Append(int data)
+        {
+            Node node2 = new Node(data);
+            if (this.head == null)
+            {
+                this.head = node2;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = node2;
+                head.next = temp;
+            }
+            System.Console.WriteLine(data + " added in  appending order \n ");
+        }
         internal Node RemoveFirstNode()
         {
             if (this.head == null)
