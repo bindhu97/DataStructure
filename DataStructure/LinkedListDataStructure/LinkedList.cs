@@ -85,5 +85,25 @@ namespace DataStructure.LinkedListDataStructure
             System.Console.WriteLine("First Node Removed.");
             return this.head;
         }
+        internal Node RemoveLastNode()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                head = null;
+                return null;
+            }
+            Node newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            System.Console.WriteLine("Last Node Removed.");
+            return head;
+        }
     }
 }

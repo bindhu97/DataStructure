@@ -18,6 +18,8 @@ namespace DataStructure.LinkedListDataStructure
             list.InsertAtParticularPosition(2, 30);
             list.RemoveFirstNode();
             list.Display();
+            list.RemoveLastNode();
+            list.Display();
         }
     }
 }
