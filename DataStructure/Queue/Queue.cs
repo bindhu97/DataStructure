@@ -29,5 +29,36 @@ namespace DataStructure.Queue
             }
             Console.WriteLine(node.data + " inserted in Queue");
         }
+        public void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+            }
+        }
+
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    head.next.next = null;
+                }
+                head.next = head;
+            }
+        }
     }
 }
