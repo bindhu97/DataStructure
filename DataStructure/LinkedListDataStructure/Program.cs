@@ -36,7 +36,17 @@ using System.Collections.Generic;
 //    }
 //}
 using DataStructure.Stack;
-Stack stack = new Stack();
-stack.Push(56);
-stack.Push(30);
-stack.Push(70);
+internal class Program
+{
+    public static void Main(string[] args)
+    {
+        Stack stack = new Stack();
+        stack.Push(56);
+        stack.Push(30);
+        stack.Push(70);
+        stack.Display();
+        stack.Peek();
+        stack.Pop();
+        stack.IsEmpty();
+    }
+}
