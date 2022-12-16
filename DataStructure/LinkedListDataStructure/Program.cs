@@ -35,18 +35,30 @@ using System.Collections.Generic;
 //        }
 //    }
 //}
-using DataStructure.Stack;
+//using DataStructure.Stack;
+//internal class Program
+//{
+//    public static void Main(string[] args)
+//    {
+//        Stack stack = new Stack();
+//        stack.Push(56);
+//        stack.Push(30);
+//        stack.Push(70);
+//        stack.Display();
+//        stack.Peek();
+//        stack.Pop();
+//        stack.IsEmpty();
+//    }
+//}
+
+using DataStructure.Queue;
 internal class Program
 {
     public static void Main(string[] args)
     {
-        Stack stack = new Stack();
-        stack.Push(56);
-        stack.Push(30);
-        stack.Push(70);
-        stack.Display();
-        stack.Peek();
-        stack.Pop();
-        stack.IsEmpty();
+        Queue queue = new Queue();
+        queue.Enqueue(56);
+        queue.Enqueue(30);
+        queue.Enqueue(70);
     }
 }
